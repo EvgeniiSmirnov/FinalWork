@@ -45,18 +45,18 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
- #   # Execute all unit tests in the solution
- #   - name: Execute unit tests
- #     run: dotnet test
+    # Execute all unit tests in the solution
+    - name: Execute unit tests
+      run: dotnet test
        # Execute Smoke tests in the solution
-    - name: Execute Smoke tests
-      if: "github.event.inputs.deployment_target == 'smoke_test'"
-      run: dotnet test --filter Category=Smoke
+ #   - name: Execute Smoke tests
+ #     if: "github.event.inputs.deployment_target == 'smoke_test'"
+ #     run: dotnet test --filter Category=Smoke
 
       # Execute Regression tests in the solution
-    - name: Execute Regression tests
-      if: "github.event.inputs.deployment_target == 'regression_test'"
-      run: dotnet test --filter Category=Regression
+ #   - name: Execute Regression tests
+ #     if: "github.event.inputs.deployment_target == 'regression_test'"
+ #     run: dotnet test --filter Category=Regression
     
     #
     - name: Load test report history
