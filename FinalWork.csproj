@@ -10,12 +10,27 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Remove="appsettings.json" />
+		<None Remove="Nlog.config" />
 		<None Remove="Resources\test_image.jpg" />
+		<None Remove="Resources\tmp.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="appsettings.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Nlog.config">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
 	</ItemGroup>
 
 	<ItemGroup>
 		<Content Include="Resources\test_image.jpg">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\tmp.json">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
 
