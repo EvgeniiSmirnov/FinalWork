@@ -1,0 +1,15 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Apr 21 12:54:06 GMT 2024","Sun Apr 21 12:54:07 GMT 2024","157","","API Project Tests","","ProjectTest","DeleteProjectTest","DeleteProjectTest","Удаляем проект по коду
+"
+"passed","Sun Apr 21 12:54:07 GMT 2024","Sun Apr 21 12:54:07 GMT 2024","84","","API Project Tests","","ProjectTest","GetProjectByIncorrectCode","GetProjectByIncorrectCode","Проверяем, что возвращается ошибку если не правильно указан код проекта
+"
+"passed","Sun Apr 21 12:54:06 GMT 2024","Sun Apr 21 12:54:06 GMT 2024","101","","API Project Tests","","ProjectTest","GetProjectTest","GetProjectTest","Получаем данные о проекта по коду проекта
+"
+"passed","Sun Apr 21 12:54:06 GMT 2024","Sun Apr 21 12:54:06 GMT 2024","103","","API Project Tests","","ProjectTest","GetAllProjectsTest","GetAllProjectsTest","Получаем данные о всех проектах
+"
+"passed","Sun Apr 21 12:54:07 GMT 2024","Sun Apr 21 12:54:07 GMT 2024","97","","API Project Tests","","ProjectTest","AddProjectNegativeTest","AddProjectNegativeTest","Ошибка при создании проеката с полем code длинной более 10 символов
+"
+"passed","Sun Apr 21 12:54:07 GMT 2024","Sun Apr 21 12:54:07 GMT 2024","89","","API Project Tests","","ProjectTest","AddProjectNegativeTest2","AddProjectNegativeTest2","Проверяем, что поле title обязательно для заполнения
+"
+"passed","Sun Apr 21 12:54:06 GMT 2024","Sun Apr 21 12:54:06 GMT 2024","691","","API Project Tests","","ProjectTest","CreateTest","CreateTest","Создание проекта
+"
