@@ -1,0 +1,28 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Apr 21 13:02:21 GMT 2024","Sun Apr 21 13:02:22 GMT 2024","672","","API Project Tests","","ProjectTest","CreateTest","CreateTest","Создание проекта
+"
+"passed","Sun Apr 21 13:02:46 GMT 2024","Sun Apr 21 13:02:52 GMT 2024","5939","","","","HoverTest","Hover","Hover","Тест на отображении подсказки при наведении курсора
+"
+"passed","Sun Apr 21 13:02:52 GMT 2024","Sun Apr 21 13:02:56 GMT 2024","3972","","","","InvalidDataTest","CreateProjectWithInvalidDataTest","CreateProjectWithInvalidDataTest","Тест на отображении подсказки при наведении курсора
+"
+"passed","Sun Apr 21 13:02:22 GMT 2024","Sun Apr 21 13:02:22 GMT 2024","93","","API Project Tests","","ProjectTest","AddProjectNegativeTest2","AddProjectNegativeTest2","Проверяем, что поле title обязательно для заполнения
+"
+"passed","Sun Apr 21 13:02:56 GMT 2024","Sun Apr 21 13:03:00 GMT 2024","3891","","","","InvalidDataTest","CreatProjectWithUpperBoundProjectCodeTest","CreatProjectWithUpperBoundProjectCodeTest",""
+"passed","Sun Apr 21 13:02:22 GMT 2024","Sun Apr 21 13:02:22 GMT 2024","119","","API Project Tests","","ProjectTest","GetAllProjectsTest","GetAllProjectsTest","Получаем данные о всех проектах
+"
+"passed","Sun Apr 21 13:02:35 GMT 2024","Sun Apr 21 13:02:40 GMT 2024","5414","","","","BoundaryProjectTest","UpperBoundProjectCodeTest","UpperBoundProjectCodeTest","Создание проекта. Проверяем максимальное количество символов для кода проекта
+"
+"passed","Sun Apr 21 13:02:22 GMT 2024","Sun Apr 21 13:02:22 GMT 2024","95","","API Project Tests","","ProjectTest","AddProjectNegativeTest","AddProjectNegativeTest","Ошибка при создании проеката с полем code длинной более 10 символов
+"
+"passed","Sun Apr 21 13:02:22 GMT 2024","Sun Apr 21 13:02:22 GMT 2024","167","","API Project Tests","","ProjectTest","DeleteProjectTest","DeleteProjectTest","Удаляем проект по коду
+"
+"passed","Sun Apr 21 13:02:40 GMT 2024","Sun Apr 21 13:02:46 GMT 2024","6203","","","","FileUploadTest","ProjectLogoUploadTest","ProjectLogoUploadTest","Тест на загрузку изображения в профиль проекта
+"
+"passed","Sun Apr 21 13:02:22 GMT 2024","Sun Apr 21 13:02:22 GMT 2024","107","","API Project Tests","","ProjectTest","GetProjectTest","GetProjectTest","Получаем данные о проекта по коду проекта
+"
+"passed","Sun Apr 21 13:02:30 GMT 2024","Sun Apr 21 13:02:35 GMT 2024","4934","","","","BoundaryProjectTest","LowerBoundProjectCodeTest","LowerBoundProjectCodeTest","Создание проекта. Проверяем минимальное количество символов для кода проекта
+"
+"passed","Sun Apr 21 13:02:23 GMT 2024","Sun Apr 21 13:02:30 GMT 2024","7134","","","","ProjectTest","CreateAndDeleteProjectTest","CreateAndDeleteProjectTest","Тест на создание и удаление сущности
+"
+"passed","Sun Apr 21 13:02:22 GMT 2024","Sun Apr 21 13:02:23 GMT 2024","85","","API Project Tests","","ProjectTest","GetProjectByIncorrectCode","GetProjectByIncorrectCode","Проверяем, что возвращается ошибку если не правильно указан код проекта
+"
