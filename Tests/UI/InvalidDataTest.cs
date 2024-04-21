@@ -3,7 +3,7 @@ using NUnit.Allure.Attributes;
 using FinalWork.Models.UI;
 using FinalWork.Pages;
 
-namespace Test4.Tests.UI;
+namespace FinalWork.Tests.UI;
 
 public class InvalidDataTest: BaseTest
 {
