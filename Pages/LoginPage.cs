@@ -29,7 +29,7 @@ public class LoginPage : BasePage
     public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);
     public IWebElement PasswordInput => WaitsHelper.WaitForExists(PasswordInputBy);
     public IWebElement RememberMeCheckbox => WaitsHelper.WaitForExists(RememberMeCheckboxBy);
-    private IWebElement InvalidDataMessage => WaitsHelper.WaitForExists(InvalidDataMessageBy);
+    public IWebElement InvalidDataMessage => WaitsHelper.WaitForExists(InvalidDataMessageBy);
     public Button SignInButton => new(Driver, SignInButtonBy);
 
     // Методы действий с элементами
