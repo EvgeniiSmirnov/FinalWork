@@ -11,7 +11,7 @@ public class BoundaryProjectTest : BaseTest
 {
     [Test(Description = "Создание проекта. Проверяем минимальное количество символов для кода проекта")]
     [Category("Regression"), Category("Smoke"), AllureSeverity(SeverityLevel.critical)]
-    [AllureFeature("Positive")]
+    [AllureFeature("NFE")]
     public void LowerBoundProjectCodeTest()
     {        
         int projectCode = new Random().Next(11, 99);
@@ -34,12 +34,12 @@ public class BoundaryProjectTest : BaseTest
             Assert.That(projectPage.IsPageOpened(), Is.EqualTo(true));
             Assert.That(projectPage.GetRepositoryNameText(), Does.Contain(projectCode.ToString()));
         });
-        AllureApi.Step("Создан проект c ожидаемым значением кода проекта");
-        AllureApi.Step("Создан проект c ожидаемым значением кода проекта");
+        AllureApi.Step($"Создан проект c ожидаемым значением {projectCode}");
     }
 
     [Test(Description = "Создание проекта. Проверяем максимальное количество символов для кода проекта")]
     [Category("Regression"), Category("Smoke"), AllureSeverity(SeverityLevel.critical)]
+    [AllureFeature("NFE")]
     public void UpperBoundProjectCodeTest()
     {
         string projectCode = $"ABCDEFG{new Random().Next(111, 999)}";
@@ -62,6 +62,6 @@ public class BoundaryProjectTest : BaseTest
             Assert.That(projectPage.IsPageOpened(), Is.EqualTo(true));
             Assert.That(projectPage.GetRepositoryNameText(), Does.Contain(projectCode));
         });
-        AllureApi.Step("Создан проект c ожидаемым значением кода проекта");
+        AllureApi.Step($"Создан проект c ожидаемым значением {projectCode}");
     }
 }

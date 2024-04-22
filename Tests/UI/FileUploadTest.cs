@@ -12,11 +12,11 @@ public class FileUploadTest : BaseTest
 {
     [Test(Description = "Тест на загрузку изображения в профиль проекта")]
     [Category("Regression"), AllureSeverity(SeverityLevel.normal)]
+    [AllureFeature("NFE")]
     public void ProjectLogoUploadTest()
     {
         int projectCred = new Random().Next(1000, 9999);
 
-        AllureApi.Step("Логинимся на сайт");
         NavigationSteps.SuccessfulLogin(Admin!);
 
         Project project = new Project.Builder()
@@ -26,7 +26,6 @@ public class FileUploadTest : BaseTest
             .SetCheckboxPublicProjectAccessType(true)
             .Build();
 
-        AllureApi.Step("Создаём проект");
         ProjectsSteps.CreateProject(project);
 
         ProjectPage projectPage = new(Driver, false);
