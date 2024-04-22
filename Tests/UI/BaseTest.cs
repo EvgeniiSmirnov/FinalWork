@@ -20,6 +20,7 @@ public class BaseTest
     protected ProjectsSteps ProjectsSteps;
 
     protected User? Admin { get; private set; }
+    protected User? User { get; private set; }
 
     [SetUp]
     public void Setup()
@@ -32,6 +33,7 @@ public class BaseTest
         ProjectsSteps = new ProjectsSteps(Driver);
 
         Admin = Configurator.Admin;
+        User = Configurator.User;
 
         Driver.Navigate().GoToUrl(Configurator.AppSettings.UI_URL);
     }

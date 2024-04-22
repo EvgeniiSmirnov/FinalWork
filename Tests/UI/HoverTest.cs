@@ -11,6 +11,7 @@ namespace FinalWork.Tests.UI;
 [AllureSuite("UI tests")]
 public class HoverTest : BaseTest
 {
+    [AllureDescription("123")]
     [Test(Description = "Тест на отображении подсказки при наведении курсора")]
     [Category("Regression"), AllureSeverity(SeverityLevel.normal)]
     [AllureFeature("NFE")]
@@ -50,6 +51,7 @@ public class HoverTest : BaseTest
 
         Assert.That(Driver.FindElement(By.XPath("//*[text()='Collapse suite tree']")).Text,
             Is.EqualTo("Collapse suite tree"));
+        //TakeScreenshot("платёжная информация");
         AllureApi.Step("Найдена всплывающая подсказка");
     }
 }

@@ -10,7 +10,7 @@ public class NavigationSteps(IWebDriver driver) : BaseSteps(driver)
     [AllureStep("Логинимся на сайт")]
     public ProjectsPage SuccessfulLogin(User user) => Login<ProjectsPage>(user);
 
-    [AllureStep("Логинимся на сайт")]
+    [AllureStep("Логинимся на сайт c некорректным логином")]
     public LoginPage IncorrectLogin(User user) => Login<LoginPage>(user);
 
     private T Login<T>(User user) where T : BasePage

@@ -95,9 +95,9 @@ public class ProjectsPage : BasePage
     [AllureStep("Проверяем всплывающее окно об ошибке")]
     public bool IsInvalidDataMessageDisplayed() => InvalidDataMessage.Displayed;
 
-    [AllureStep("Проверяем отображение сообщения об ошибке")]
+    [AllureStep("Проверяем отображение и текст подсказки по ошибке ошибке")]
     public bool IsFormatProjectCodeMessageDisplayed() => FormatProjectCodeMessage.Displayed;
 
-    [AllureStep("Проверяем отображение сообщения об ошибке")]
+    [AllureStep("Проверяем отображение и текст подсказки по ошибке ошибке")]
     public bool IsUpperBoundProjectCodeMessageDisplayed() => UpperBoundProjectCodeMessage.Displayed;
 }
