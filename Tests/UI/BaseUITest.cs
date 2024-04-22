@@ -13,7 +13,7 @@ namespace FinalWork.Tests;
 //[Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 [AllureNUnit]
-public class BaseTest
+public class BaseUITest
 {
     protected IWebDriver Driver { get; private set; }
     protected WaitsHelper WaitsHelper { get; private set; }

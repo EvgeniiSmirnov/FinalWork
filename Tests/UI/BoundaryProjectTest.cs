@@ -7,7 +7,7 @@ using FinalWork.Steps;
 namespace FinalWork.Tests.UI;
 
 [AllureSuite("UI tests")]
-public class BoundaryProjectTest : BaseTest
+public class BoundaryProjectTest : BaseUITest
 {
     [Test(Description = "Создание проекта. Проверяем минимальное количество символов для кода проекта")]
     [Category("Regression"), Category("Smoke"), AllureSeverity(SeverityLevel.critical)]

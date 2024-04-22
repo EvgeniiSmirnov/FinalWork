@@ -5,7 +5,7 @@ using NUnit.Allure.Attributes;
 
 namespace FinalWork.Tests.UI;
 
-public class LoginTest : BaseTest
+public class LoginTest : BaseUITest
 {
     [Test(Description = "Тест воспроизводящий любой дефект")]
     [Category("Regression"), AllureSeverity(SeverityLevel.critical)]

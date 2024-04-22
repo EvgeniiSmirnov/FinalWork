@@ -9,7 +9,7 @@ using NUnit.Allure.Attributes;
 namespace FinalWork.Tests.UI;
 
 [AllureSuite("UI tests")]
-public class HoverTest : BaseTest
+public class HoverTest : BaseUITest
 {
     [AllureDescription("123")]
     [Test(Description = "Тест на отображении подсказки при наведении курсора")]

@@ -8,7 +8,7 @@ using FinalWork.Steps;
 namespace FinalWork.Tests.UI;
 
 [AllureSuite("UI tests")]
-public class FileUploadTest : BaseTest
+public class FileUploadTest : BaseUITest
 {
     [Test(Description = "Тест на загрузку изображения в профиль проекта")]
     [Category("Regression"), AllureSeverity(SeverityLevel.normal)]

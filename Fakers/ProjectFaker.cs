@@ -5,7 +5,7 @@ namespace FinalWork.Fakers;
 
 public class ProjectFaker : Faker<Project>
 {
-    private static Random random = new Random();
+    private static Random random = new();
 
     private static string RandomString(int length)
     {

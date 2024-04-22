@@ -7,7 +7,7 @@ using NUnit.Allure.Attributes;
 namespace FinalWork.Tests;
 
 [AllureSuite("UI tests")]
-public class ProjectTest : BaseTest
+public class ProjectTest : BaseUITest
 {
     [Test(Description = "Тест на создание и удаление сущности")]
     [Category("Regression"), Category("Smoke"), AllureSeverity(SeverityLevel.critical)]
