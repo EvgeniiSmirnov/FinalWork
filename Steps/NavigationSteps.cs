@@ -10,7 +10,7 @@ public class NavigationSteps(IWebDriver driver) : BaseSteps(driver)
     //public LoginPage NavigateToLoginPage() => new LoginPage(Driver, true);
     //public ProjectPage NavigateToProjectPage() => new ProjectPage(Driver, true);
 
-    [AllureStep]
+    [AllureStep("Логинимся на сайт123")]
     public ProjectsPage SuccessfulLogin(User user) => Login<ProjectsPage>(user);
 
 

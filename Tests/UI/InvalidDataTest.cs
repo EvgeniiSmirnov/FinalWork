@@ -5,6 +5,7 @@ using FinalWork.Pages;
 
 namespace FinalWork.Tests.UI;
 
+[AllureSuite("UI tests")]
 public class InvalidDataTest: BaseTest
 {
     [Test(Description = "Тест на отображении подсказки при наведении курсора")]

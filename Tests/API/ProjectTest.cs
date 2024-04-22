@@ -7,7 +7,7 @@ using FinalWork.Models.API;
 
 namespace FinalWork.Tests.API;
 
-[AllureSuite("API Project Tests")]
+[AllureSuite("API tests")]
 public class ProjectTest : BaseApiTest
 {
     private Project? _project;

@@ -7,7 +7,7 @@ using FinalWork.Steps;
 
 namespace FinalWork.Tests.UI;
 
-[AllureSuite("UI Tests")]
+[AllureSuite("UI tests")]
 public class FileUploadTest : BaseTest
 {
     [Test(Description = "Тест на загрузку изображения в профиль проекта")]

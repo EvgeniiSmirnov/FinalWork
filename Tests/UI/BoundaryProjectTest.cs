@@ -6,7 +6,7 @@ using FinalWork.Steps;
 
 namespace FinalWork.Tests.UI;
 
-[AllureSuite("UI Tests")]
+[AllureSuite("UI tests")]
 public class BoundaryProjectTest : BaseTest
 {
     [Test(Description = "Создание проекта. Проверяем минимальное количество символов для кода проекта")]

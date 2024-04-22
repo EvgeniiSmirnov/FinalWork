@@ -6,6 +6,7 @@ using NUnit.Allure.Attributes;
 
 namespace FinalWork.Tests;
 
+[AllureSuite("UI tests")]
 public class ProjectTest : BaseTest
 {
     [Test(Description = "Тест на создание и удаление сущности")]
