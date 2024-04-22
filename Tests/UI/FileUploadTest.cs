@@ -47,6 +47,7 @@ public class FileUploadTest : BaseTest
             "Resources", "test_image.jpg"));
 
         Assert.That(projectSettingsPage.IsMessageLogoExist, Is.EqualTo(true));
+        TakeScreenshot("Project avatar was successfully updated!");
         AllureApi.Step("Получено сообщение об успешном добавлении изображения");
     }
 }

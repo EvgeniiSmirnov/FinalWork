@@ -34,6 +34,7 @@ public class BoundaryProjectTest : BaseTest
             Assert.That(projectPage.IsPageOpened(), Is.EqualTo(true));
             Assert.That(projectPage.GetRepositoryNameText(), Does.Contain(projectCode.ToString()));
         });
+        TakeScreenshot($"Проект {projectCode}");
         AllureApi.Step($"Создан проект c ожидаемым значением {projectCode}");
     }
 
@@ -62,6 +63,7 @@ public class BoundaryProjectTest : BaseTest
             Assert.That(projectPage.IsPageOpened(), Is.EqualTo(true));
             Assert.That(projectPage.GetRepositoryNameText(), Does.Contain(projectCode));
         });
+        TakeScreenshot($"Проект {projectCode}");
         AllureApi.Step($"Создан проект c ожидаемым значением {projectCode}");
     }
 }

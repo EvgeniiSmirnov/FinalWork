@@ -32,6 +32,7 @@ public class InvalidDataTest: BaseTest
             Assert.That(projectsPage.IsInvalidDataMessageDisplayed(), Is.EqualTo(true));
             Assert.That(projectsPage.IsFormatProjectCodeMessageDisplayed(), Is.EqualTo(true));
         });
+        TakeScreenshot("The code format is invalid");
     }
 
     [Test(Description = "Тест на ввод данных превышающих допустимые")]
@@ -59,5 +60,6 @@ public class InvalidDataTest: BaseTest
             Assert.That(projectsPage.IsInvalidDataMessageDisplayed(), Is.EqualTo(true));
             Assert.That(projectsPage.IsUpperBoundProjectCodeMessageDisplayed(), Is.EqualTo(true));
         });
+        TakeScreenshot("The code format is invalid");
     }
 }
