@@ -51,7 +51,7 @@ public class HoverTest : BaseTest
 
         Assert.That(Driver.FindElement(By.XPath("//*[text()='Collapse suite tree']")).Text,
             Is.EqualTo("Collapse suite tree"));
-        //TakeScreenshot("платёжная информация");
+        TakeScreenshot("888");
         AllureApi.Step("Найдена всплывающая подсказка");
     }
 }
