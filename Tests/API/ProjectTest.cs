@@ -102,7 +102,7 @@ public class ProjectTest : BaseApiTest
     [Category("Regression"), AllureSeverity(SeverityLevel.normal)]
     [AllureFeature("AFE")]
     [Order(5)]
-    public void AddProjectNegativeTest()
+    public void BoundaryTest()
     {
         Project project = Project.Generate();
         project.Code += "A";
@@ -129,7 +129,7 @@ public class ProjectTest : BaseApiTest
     [Category("Regression"), AllureSeverity(SeverityLevel.normal)]
     [AllureFeature("AFE")]
     [Order(6)]
-    public void AddProjectNegativeTest2()
+    public void RequiredFieldTest()
     {
         Project project = Project.Generate();
         project.Title = null;

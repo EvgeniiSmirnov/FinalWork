@@ -23,6 +23,7 @@ public abstract class BasePage
     }
 
     public abstract bool IsPageOpened();
+
     protected abstract string GetEndpoint();
 
     private void OpenPageByUrl()

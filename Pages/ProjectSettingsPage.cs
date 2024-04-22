@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using FinalWork.Elements;
+using NUnit.Allure.Attributes;
 
 namespace FinalWork.Pages;
 
@@ -20,30 +21,32 @@ public class ProjectSettingsPage : BasePage
 
     protected override string GetEndpoint() => "";
 
-    public UIElement ProjectSettingsTitle => new UIElement(Driver, ProjectSettingsTitleBy);
+    // Поиск и ожидание элементов
+    public UIElement ProjectSettingsTitle => new(Driver, ProjectSettingsTitleBy);
+    public IWebElement ChangeLogoButton => new UIElement(Driver, ChangeLogoInputBy);
     private IWebElement DeleteProjectButton => WaitsHelper.WaitForExists(DeleteProjectButtonBy);
     private IWebElement DeleteProjectFinalButton => WaitsHelper.WaitForExists(DeleteProjectFinalButtonBy);
     public IWebElement MessageLogoInput => WaitsHelper.WaitForExists(MessageLogoInputBy);
-    public IWebElement ChangeLogoButton => new UIElement(Driver, ChangeLogoInputBy);
-
-
+    
+    [AllureStep("Клик по кнопке Delete project")]
     public ProjectSettingsPage ClickDeleteProjectButton()
     {
         DeleteProjectButton.Click();
         return new ProjectSettingsPage(Driver);
     }
 
+    [AllureStep("Клик по кнопке Delete project")]
     public ProjectSettingsPage ClickDeleteProjectFinalButton()
     {
         DeleteProjectFinalButton.Click();
         return new ProjectSettingsPage(Driver);
     }
 
-    public ProjectSettingsPage ClickChangeLogoButton1()
-    {
-        ChangeLogoButton.Click();
-        return new ProjectSettingsPage(Driver);
-    }
+    //public ProjectSettingsPage ClickChangeLogoButton1()
+    //{
+    //    ChangeLogoButton.Click();
+    //    return new ProjectSettingsPage(Driver);
+    //}
 
     public bool IsMessageLogoExist() => MessageLogoInput.Displayed;
 }

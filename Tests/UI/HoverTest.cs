@@ -14,7 +14,7 @@ public class HoverTest : BaseTest
     [Test(Description = "Тест на отображении подсказки при наведении курсора")]
     [Category("Regression"), AllureSeverity(SeverityLevel.normal)]
     [AllureFeature("NFE")]
-    public void Hover()
+    public void HoverSuiteTreeTest()
     {
         int projectCred = new Random().Next(1000, 9999);
 

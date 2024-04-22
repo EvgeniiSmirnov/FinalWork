@@ -30,7 +30,7 @@ public class ProjectsPage : BasePage
 
     protected override string GetEndpoint() => END_POINT;
 
-    //
+    // Поиск и ожидание элементов
     public UIElement TitleText => new UIElement(Driver, TitleTextBy);
     public UIElement ProjectNameInput => new(Driver, ProjectNameBy);
     public UIElement ProjectCodeInput => new(Driver, ProjectCodeBy);

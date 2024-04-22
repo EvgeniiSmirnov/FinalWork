@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using FinalWork.Elements;
+using NUnit.Allure.Attributes;
 
 namespace FinalWork.Pages;
 
@@ -23,12 +24,13 @@ public class LoginPage : BasePage
 
     protected override string GetEndpoint() => END_POINT;
 
-    // Методы поиска элементов
+    // Поиск и ожидание элементов
     public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);
     public IWebElement PasswordInput => WaitsHelper.WaitForExists(PasswordInputBy);
     public IWebElement RememberMeCheckbox => WaitsHelper.WaitForExists(RememberMeCheckboxBy);
     public Button SignInButton => new Button(Driver, SignInButtonBy);
 
     // Методы действий с элементами
+    [AllureStep("Клик по кнопке Sign in")]
     public void ClickSignInButton() => SignInButton.Click();
 }
