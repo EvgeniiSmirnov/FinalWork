@@ -6,6 +6,7 @@ using FinalWork.Steps;
 
 namespace FinalWork.Tests.UI;
 
+[AllureSuite("UI Tests")]
 public class BoundaryProjectTest : BaseTest
 {
     [Test(Description = "Создание проекта. Проверяем минимальное количество символов для кода проекта")]
@@ -41,7 +42,7 @@ public class BoundaryProjectTest : BaseTest
     [Category("Regression"), Category("Smoke"), AllureSeverity(SeverityLevel.critical)]
     public void UpperBoundProjectCodeTest()
     {
-        string projectCode = $"ABCDEFGH{new Random().Next(11, 99)}";
+        string projectCode = $"ABCDEFG{new Random().Next(111, 999)}";
 
         AllureApi.Step("Логинимся на сайт");
         NavigationSteps.SuccessfulLogin(Admin!);

@@ -8,10 +8,12 @@ using NUnit.Allure.Attributes;
 
 namespace FinalWork.Tests.UI;
 
+[AllureSuite("UI Tests")]
 public class HoverTest : BaseTest
 {
     [Test(Description = "Тест на отображении подсказки при наведении курсора")]
-    [Category("Regression"), AllureSeverity(SeverityLevel.normal)]
+    //[Category("Regression"), AllureSeverity(SeverityLevel.normal)]
+    [Category("Regression")]
     public void Hover()
     {
         int projectCred = new Random().Next(1000, 9999);

@@ -8,6 +8,7 @@ using NUnit.Allure.Core;
 
 namespace FinalWork.Tests;
 
+//[Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 [AllureNUnit]
 public class BaseTest
