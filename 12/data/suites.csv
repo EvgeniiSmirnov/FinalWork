@@ -1,0 +1,29 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Apr 22 10:39:49 GMT 2024","Mon Apr 22 10:39:49 GMT 2024","64","","API tests","","ProjectTest","BoundaryTest","BoundaryTest","Проверяем, что возвращается ошибка если поле code длинной более 10 символов
+"
+"failed","Mon Apr 22 10:39:49 GMT 2024","Mon Apr 22 10:40:49 GMT 2024","60634","","UI tests","","ProjectTest","CreateAndDeleteProjectTest","CreateAndDeleteProjectTest","Тест на создание и удаление сущности
+"
+"passed","Mon Apr 22 10:39:48 GMT 2024","Mon Apr 22 10:39:48 GMT 2024","70","","API tests","","ProjectTest","GetAllProjectsTest","GetAllProjectsTest","Тест на получение данных о всех проектах
+"
+"failed","Mon Apr 22 10:45:50 GMT 2024","Mon Apr 22 10:46:50 GMT 2024","60081","","UI tests","","InvalidDataTest","CreatProjectWithUpperBoundProjectCodeTest","CreatProjectWithUpperBoundProjectCodeTest","Тест на ввод данных превышающих допустимые
+"
+"passed","Mon Apr 22 10:39:48 GMT 2024","Mon Apr 22 10:39:48 GMT 2024","667","","API tests","","ProjectTest","CreateTest","CreateTest","Тест на создание проекта
+"
+"passed","Mon Apr 22 10:39:49 GMT 2024","Mon Apr 22 10:39:49 GMT 2024","64","","API tests","","ProjectTest","GetProjectByIncorrectCode","GetProjectByIncorrectCode","Проверяем, что возвращается ошибка если не правильно указан код проекта
+"
+"failed","Mon Apr 22 10:41:50 GMT 2024","Mon Apr 22 10:42:50 GMT 2024","60082","","UI tests","","BoundaryProjectTest","UpperBoundProjectCodeTest","UpperBoundProjectCodeTest","Создание проекта. Проверяем максимальное количество символов для кода проекта
+"
+"passed","Mon Apr 22 10:39:48 GMT 2024","Mon Apr 22 10:39:48 GMT 2024","92","","API tests","","ProjectTest","GetProjectTest","GetProjectTest","Тест на получение данных о проекте по коду проекта
+"
+"passed","Mon Apr 22 10:39:48 GMT 2024","Mon Apr 22 10:39:49 GMT 2024","140","","API tests","","ProjectTest","DeleteProjectTest","DeleteProjectTest","Тест на удаление проекта по коду
+"
+"failed","Mon Apr 22 10:44:50 GMT 2024","Mon Apr 22 10:45:50 GMT 2024","60186","","UI tests","","InvalidDataTest","CreateProjectWithInvalidDataTest","CreateProjectWithInvalidDataTest","Тест на использование некорректных данных
+"
+"failed","Mon Apr 22 10:40:49 GMT 2024","Mon Apr 22 10:41:50 GMT 2024","60088","","UI tests","","BoundaryProjectTest","LowerBoundProjectCodeTest","LowerBoundProjectCodeTest","Создание проекта. Проверяем минимальное количество символов для кода проекта
+"
+"failed","Mon Apr 22 10:42:50 GMT 2024","Mon Apr 22 10:43:50 GMT 2024","60077","","UI tests","","FileUploadTest","ProjectLogoUploadTest","ProjectLogoUploadTest","Тест на загрузку изображения в профиль проекта
+"
+"failed","Mon Apr 22 10:43:50 GMT 2024","Mon Apr 22 10:44:50 GMT 2024","60077","","UI tests","","HoverTest","HoverSuiteTreeTest","HoverSuiteTreeTest","123Тест на отображении подсказки при наведении курсора
+"
+"passed","Mon Apr 22 10:39:49 GMT 2024","Mon Apr 22 10:39:49 GMT 2024","65","","API tests","","ProjectTest","RequiredFieldTest","RequiredFieldTest","Проверяем, что поле title обязательно для заполнения
+"
