@@ -10,6 +10,7 @@ public class InvalidDataTest: BaseTest
 {
     [Test(Description = "Тест на отображении подсказки при наведении курсора")]
     [Category("Regression"), AllureSeverity(SeverityLevel.critical)]
+    [AllureFeature("AFE")]
     public void CreateProjectWithInvalidDataTest()
     {
         string projectCode = "@#%";
