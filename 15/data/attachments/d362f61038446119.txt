@@ -1,0 +1,5 @@
+  Assert.That(loginPage.InvalidDataMessage.Text.Trim(), Is.EqualTo("Successfully added the new project.1"))
+  Expected string length 36 but was 55. Strings differ at index 0.
+  Expected: "Successfully added the new project.1"
+  But was:  "Value 'test' does not match format email of type string"
+  -----------^
