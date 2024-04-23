@@ -16,8 +16,9 @@ on:
           - smoke
           - regression
 
+  # run каждую 25 и 55 минуту каждого часа
   schedule:
-       - cron: '55 * * * *'
+       - cron: '25,55 * * * *'
 
 jobs:
 
