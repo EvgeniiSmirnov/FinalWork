@@ -17,7 +17,7 @@ on:
           - regression
 
   schedule:
-        - cron: '59 * * * *'
+        - cron: '45 * * * *'
 
 jobs:
 
