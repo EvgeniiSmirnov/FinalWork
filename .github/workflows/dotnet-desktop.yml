@@ -17,7 +17,7 @@ on:
           - regression
 
   schedule:
-        - cron: '45 * * * *'
+        - cron: '59 * * * *'
 
 jobs:
 
@@ -51,7 +51,7 @@ jobs:
     
     # Execute Smoke tests in the solution
     - name: Execute Smoke tests
-      if: "github.event.inputs.deployment_target == 'smoke' || github.event.schedule == '45 * * * *'"
+      if: "github.event.inputs.deployment_target == 'smoke'"
       run: dotnet test --filter Category=smoke
       id: smoke
 
