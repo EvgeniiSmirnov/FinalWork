@@ -1,10 +1,10 @@
 name: .NET Core Desktop
 
 on:
-  push:
-    branches: [ "feature1" ]
-  pull_request:
-    branches: [ "feature1" ]
+#  push:
+#    branches: [ "feature1" ]
+#  pull_request:
+#    branches: [ "feature1" ]
   workflow_dispatch: 
    inputs: 
       deployment_target:
