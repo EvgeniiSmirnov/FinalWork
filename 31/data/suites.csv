@@ -1,0 +1,17 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Apr 23 03:23:14 GMT 2024","Tue Apr 23 03:23:14 GMT 2024","93","","API tests","","ProjectTest","GetAllProjectsTest","GetAllProjectsTest","Тест на получение данных о всех проектах
+"
+"passed","Tue Apr 23 03:23:14 GMT 2024","Tue Apr 23 03:23:14 GMT 2024","104","","API tests","","ProjectTest","GetProjectTest","GetProjectTest","Тест на получение данных о проекте по коду проекта
+"
+"passed","Tue Apr 23 03:23:14 GMT 2024","Tue Apr 23 03:23:14 GMT 2024","82","","API tests","","ProjectTest","GetProjectFromJSONTest","GetProjectFromJSONTest","Тест на получение данных о проекте по коду проекта из JSON файла
+"
+"passed","Tue Apr 23 03:23:14 GMT 2024","Tue Apr 23 03:23:21 GMT 2024","6977","","UI tests","","ProjectTest","CreateAndDeleteProjectTest","CreateAndDeleteProjectTest","Тест на создание и удаление сущности
+"
+"passed","Tue Apr 23 03:23:21 GMT 2024","Tue Apr 23 03:23:26 GMT 2024","5100","","UI tests","","BoundaryProjectTest","LowerBoundProjectCodeTest","LowerBoundProjectCodeTest","Создание проекта. Проверяем минимальное количество символов для кода проекта
+"
+"passed","Tue Apr 23 03:23:26 GMT 2024","Tue Apr 23 03:23:32 GMT 2024","5087","","UI tests","","BoundaryProjectTest","UpperBoundProjectCodeTest","UpperBoundProjectCodeTest","Создание проекта. Проверяем максимальное количество символов для кода проекта
+"
+"passed","Tue Apr 23 03:23:13 GMT 2024","Tue Apr 23 03:23:14 GMT 2024","703","","API tests","","ProjectTest","CreateTest","CreateTest","Тест на создание проекта
+"
+"passed","Tue Apr 23 03:23:14 GMT 2024","Tue Apr 23 03:23:14 GMT 2024","171","","API tests","","ProjectTest","DeleteProjectTest","DeleteProjectTest","Тест на удаление проекта по коду
+"
