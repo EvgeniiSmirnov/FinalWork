@@ -15,7 +15,7 @@ public class RestClientExtended
         _client = new RestClient(options);
         _client.AddDefaultHeaders(new Dictionary<string, string>
         {
-            { "token", Configurator.Token },
+            { "token", Configurator.Token! },
             { "accept", "application/json"},
             { "content-type", "application/json"}
         });
