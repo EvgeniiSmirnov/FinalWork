@@ -1,0 +1,17 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Apr 23 11:54:37 GMT 2024","Tue Apr 23 11:54:47 GMT 2024","9921","","UI tests","","ProjectTest","CreateAndDeleteProjectTest","CreateAndDeleteProjectTest","Тест на создание и удаление сущности
+"
+"passed","Tue Apr 23 11:54:47 GMT 2024","Tue Apr 23 11:54:52 GMT 2024","4947","","UI tests","","BoundaryProjectTest","LowerBoundProjectCodeTest","LowerBoundProjectCodeTest","Создание проекта. Проверяем минимальное количество символов для кода проекта
+"
+"passed","Tue Apr 23 11:54:37 GMT 2024","Tue Apr 23 11:54:37 GMT 2024","74","","API tests","","ProjectTest","GetAllProjectsTest","GetAllProjectsTest","Тест на получение данных о всех проектах
+"
+"passed","Tue Apr 23 11:54:36 GMT 2024","Tue Apr 23 11:54:36 GMT 2024","613","","API tests","","ProjectTest","CreateTest","CreateTest","Тест на создание проекта
+"
+"passed","Tue Apr 23 11:54:52 GMT 2024","Tue Apr 23 11:54:56 GMT 2024","4636","","UI tests","","BoundaryProjectTest","UpperBoundProjectCodeTest","UpperBoundProjectCodeTest","Создание проекта. Проверяем максимальное количество символов для кода проекта
+"
+"passed","Tue Apr 23 11:54:37 GMT 2024","Tue Apr 23 11:54:37 GMT 2024","141","","API tests","","ProjectTest","DeleteProjectTest","DeleteProjectTest","Тест на удаление проекта по коду
+"
+"passed","Tue Apr 23 11:54:37 GMT 2024","Tue Apr 23 11:54:37 GMT 2024","53","","API tests","","ProjectTest","GetProjectFromJSONTest","GetProjectFromJSONTest","Тест на получение данных о проекте по коду проекта из JSON файла
+"
+"passed","Tue Apr 23 11:54:36 GMT 2024","Tue Apr 23 11:54:37 GMT 2024","80","","API tests","","ProjectTest","GetProjectTest","GetProjectTest","Тест на получение данных о проекте по коду проекта
+"
