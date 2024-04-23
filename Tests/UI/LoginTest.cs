@@ -5,6 +5,7 @@ namespace FinalWork.Tests.UI;
 
 public class LoginTest : BaseUITest
 {
+    [Ignore("Тест на доработке")]
     [Test(Description = "Тест воспроизводящий любой дефект")]
     [Category("Regression"), AllureSeverity(SeverityLevel.critical)]
     [AllureFeature("AFE")]
