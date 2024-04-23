@@ -6,15 +6,16 @@ using NUnit.Allure.Attributes;
 
 namespace FinalWork.Tests;
 
-public class ProjectTest : BaseTest
+[AllureSuite("UI tests")]
+public class ProjectTest : BaseUITest
 {
     [Test(Description = "Тест на создание и удаление сущности")]
-    [Category("Regression"), AllureSeverity(SeverityLevel.critical)]
+    [Category("Regression"), Category("Smoke"), AllureSeverity(SeverityLevel.critical)]
+    [AllureFeature("NFE")]
     public void CreateAndDeleteProjectTest()
     {        
         string projectCred = new Random().Next(1000, 9999).ToString();
 
-        AllureApi.Step("Логинимся на сайт");
         NavigationSteps.SuccessfulLogin(Admin!);
 
         Project project = new Project.Builder()
@@ -24,7 +25,6 @@ public class ProjectTest : BaseTest
             .SetCheckboxPublicProjectAccessType(true)
             .Build();
 
-        AllureApi.Step($"Создаём проект c кодом {projectCred}");
         ProjectsSteps.CreateProject(project);
 
         ProjectPage projectPage = new(Driver, false);
@@ -34,8 +34,8 @@ public class ProjectTest : BaseTest
             Assert.That(projectPage.GetRepositoryNameText(), Does.Contain(projectCred));
         });
         AllureApi.Step($"Создан проект c кодом {projectCred}");
-
-        AllureApi.Step($"Создан проект по коду {projectCred}");
+        
+        AllureApi.Step($"Переход в настройки для удаления проекта по коду {projectCred}");
         projectPage.ClickSettingsButton();
 
         ProjectSettingsPage projectSettingsPage = new(Driver, false);

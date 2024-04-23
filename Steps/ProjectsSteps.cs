@@ -7,7 +7,7 @@ namespace FinalWork.Steps;
 
 public class ProjectsSteps(IWebDriver driver) : BaseSteps(driver)
 {
-    [AllureStep]
+    [AllureStep("Создаём проект")]
     public ProjectsPage CreateProject(Project project)
     {
         ProjectsPage projectsPage = new(Driver);
@@ -21,7 +21,7 @@ public class ProjectsSteps(IWebDriver driver) : BaseSteps(driver)
                 .CreateProjectButtonClick();
     }
 
-    [AllureStep]
+    [AllureStep("Создаём сьют")]
     public ProjectPage CreateSuite(Suite suite)
     {
         ProjectPage projectPage = new(Driver);

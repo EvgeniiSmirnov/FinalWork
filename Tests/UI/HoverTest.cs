@@ -8,16 +8,18 @@ using NUnit.Allure.Attributes;
 
 namespace FinalWork.Tests.UI;
 
-public class HoverTest : BaseTest
+[AllureSuite("UI tests")]
+public class HoverTest : BaseUITest
 {
+    [AllureDescription("123")]
     [Test(Description = "Тест на отображении подсказки при наведении курсора")]
     [Category("Regression"), AllureSeverity(SeverityLevel.normal)]
-    public void Hover()
+    [AllureFeature("NFE")]
+    public void HoverSuiteTreeTest()
     {
         int projectCred = new Random().Next(1000, 9999);
 
-        AllureApi.Step("Логинимся на сайт");
-        NavigationSteps.SuccessfulLogin(Admin);
+        NavigationSteps.SuccessfulLogin(Admin!);
 
         Project project = new Project.Builder()
             .SetProjectName($"Project {projectCred}")
@@ -26,10 +28,9 @@ public class HoverTest : BaseTest
             .SetCheckboxPublicProjectAccessType(true)
             .Build();
 
-        AllureApi.Step("Создаём проект");
         ProjectsSteps.CreateProject(project);
 
-        ProjectPage projectPage = new ProjectPage(Driver, false);
+        ProjectPage projectPage = new(Driver, false);
 
         Assert.Multiple(() =>
         {
@@ -44,12 +45,13 @@ public class HoverTest : BaseTest
         ProjectsSteps.CreateSuite(suite);
 
         AllureApi.Step("Наводим курсор на дерево сьютов");
-        Actions actions = new Actions(Driver);
+        Actions actions = new(Driver);
         actions.MoveToElement(projectPage.SuitesButton, 1, 1).Perform();
 
 
         Assert.That(Driver.FindElement(By.XPath("//*[text()='Collapse suite tree']")).Text,
             Is.EqualTo("Collapse suite tree"));
-        AllureApi.Step("Найдено всплывающая подсказка");
+        TakeScreenshot("Всплывающая подсказка Collapse suite tree");
+        AllureApi.Step("Найдена всплывающая подсказка");
     }
 }

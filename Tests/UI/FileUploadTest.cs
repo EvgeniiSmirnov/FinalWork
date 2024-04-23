@@ -7,15 +7,16 @@ using FinalWork.Steps;
 
 namespace FinalWork.Tests.UI;
 
-public class FileUploadTest : BaseTest
+[AllureSuite("UI tests")]
+public class FileUploadTest : BaseUITest
 {
     [Test(Description = "Тест на загрузку изображения в профиль проекта")]
     [Category("Regression"), AllureSeverity(SeverityLevel.normal)]
+    [AllureFeature("NFE")]
     public void ProjectLogoUploadTest()
     {
         int projectCred = new Random().Next(1000, 9999);
 
-        AllureApi.Step("Логинимся на сайт");
         NavigationSteps.SuccessfulLogin(Admin!);
 
         Project project = new Project.Builder()
@@ -25,7 +26,6 @@ public class FileUploadTest : BaseTest
             .SetCheckboxPublicProjectAccessType(true)
             .Build();
 
-        AllureApi.Step("Создаём проект");
         ProjectsSteps.CreateProject(project);
 
         ProjectPage projectPage = new(Driver, false);
@@ -47,6 +47,7 @@ public class FileUploadTest : BaseTest
             "Resources", "test_image.jpg"));
 
         Assert.That(projectSettingsPage.IsMessageLogoExist, Is.EqualTo(true));
+        TakeScreenshot("Project avatar was successfully updated!");
         AllureApi.Step("Получено сообщение об успешном добавлении изображения");
     }
 }

@@ -75,6 +75,8 @@ public static class Configurator
     }
 
     public static User? Admin => Users.Find(x => x?.UserType == UserType.Admin);
+    public static User? User => Users.Find(x => x?.UserType == UserType.User);
+
 
     public static string? BrowserType => Configuration[nameof(BrowserType)];
 

@@ -5,14 +5,15 @@ using FinalWork.Pages;
 
 namespace FinalWork.Tests.UI;
 
-public class InvalidDataTest: BaseTest
+[AllureSuite("UI tests")]
+public class InvalidDataTest: BaseUITest
 {
-    [Test(Description = "Тест на отображении подсказки при наведении курсора")]
+    [Test(Description = "Тест на использование некорректных данных")]
     [Category("Regression"), AllureSeverity(SeverityLevel.critical)]
+    [AllureFeature("AFE")]
     public void CreateProjectWithInvalidDataTest()
     {
         string projectCode = "@#%";
-        AllureApi.Step("Логинимся на сайт");
         NavigationSteps.SuccessfulLogin(Admin!);
 
         Project project = new Project.Builder()
@@ -22,7 +23,6 @@ public class InvalidDataTest: BaseTest
             .SetCheckboxPublicProjectAccessType(true)
             .Build();
 
-        AllureApi.Step($"Создаём проект c кодом {projectCode}");
         ProjectsSteps.CreateProject(project);
 
         ProjectsPage projectsPage = new(Driver, false);
@@ -32,14 +32,16 @@ public class InvalidDataTest: BaseTest
             Assert.That(projectsPage.IsInvalidDataMessageDisplayed(), Is.EqualTo(true));
             Assert.That(projectsPage.IsFormatProjectCodeMessageDisplayed(), Is.EqualTo(true));
         });
-        AllureApi.Step("Отображается информация об ошибке");
+        TakeScreenshot("The code format is invalid");
     }
 
-    [Test]
+    [Test(Description = "Тест на ввод данных превышающих допустимые")]
+    [Category("Regression"), AllureSeverity(SeverityLevel.critical)]
+    [AllureFeature("AFE")]
     public void CreatProjectWithUpperBoundProjectCodeTest()
     {
         string projectCode = $"ABCDEFGHJ{new Random().Next(11, 99)}";
-        AllureApi.Step("Логинимся на сайт");
+
         NavigationSteps.SuccessfulLogin(Admin!);
 
         Project project = new Project.Builder()
@@ -49,7 +51,6 @@ public class InvalidDataTest: BaseTest
             .SetCheckboxPublicProjectAccessType(true)
             .Build();
 
-        AllureApi.Step($"Создаём проект c кодом {projectCode}");
         ProjectsSteps.CreateProject(project);
 
         ProjectsPage projectsPage = new(Driver, false);
@@ -59,6 +60,6 @@ public class InvalidDataTest: BaseTest
             Assert.That(projectsPage.IsInvalidDataMessageDisplayed(), Is.EqualTo(true));
             Assert.That(projectsPage.IsUpperBoundProjectCodeMessageDisplayed(), Is.EqualTo(true));
         });
-        AllureApi.Step("Отображается информация об ошибке");
+        TakeScreenshot("The code may not be greater than 10 characters.");
     }
 }
