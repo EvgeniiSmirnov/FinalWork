@@ -21,6 +21,6 @@ public class DriverFactory
         chromeOptions.SetLoggingPreference(LogType.Driver, LogLevel.All);
 
         new DriverManager().SetUpDriver(new ChromeConfig());
-        return new ChromeDriver(chromeOptions); 
+        return new ChromeDriver(chromeOptions);
     }
 }
