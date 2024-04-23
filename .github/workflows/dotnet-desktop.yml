@@ -52,13 +52,13 @@ jobs:
     # Execute Smoke tests in the solution
     - name: Execute Smoke tests
       if: "github.event.inputs.deployment_target == 'smoke' || github.event.schedule == '45 * * * *'"
-      run: dotnet test --filter Category=Smoke
+      run: dotnet test --filter Category=smoke
       id: smoke
 
     # Execute Regression tests in the solution
     - name: Execute Regression tests
       if: "github.event.inputs.deployment_target == 'regression'"
-      run: dotnet test --filter Category=Regression
+      run: dotnet test --filter Category=regression
       id: regression
     
     # Execute all unit tests in the solution
