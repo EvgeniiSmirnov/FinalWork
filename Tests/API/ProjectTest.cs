@@ -10,6 +10,7 @@ namespace FinalWork.Tests.API;
 [AllureSuite("API tests")]
 public class ProjectTest : BaseApiTest
 {
+    private readonly Logger _logger = LogManager.GetCurrentClassLogger();
     private Project? _project;
     private CreateProjectAnswer? _createdProject;
     private int totalProjectCounty;
@@ -52,7 +53,7 @@ public class ProjectTest : BaseApiTest
             Assert.That(_createdProject.Status, Is.EqualTo(true));
             Assert.That(deserializedProjectFromAPI?.Result?.Code, Is.EqualTo(_project?.Code));
         });
-        AllureApi.Step($"Данные по проекту получены");
+        AllureApi.Step($"Получены данные по проекту");
     }
 
     [Test(Description = "Тест на получение данных о всех проектах")]
@@ -72,7 +73,7 @@ public class ProjectTest : BaseApiTest
             Assert.That(deserializedProjectInfoFromAPI!.Result!.Total, Is.GreaterThan(0));
         });
         totalProjectCounty = deserializedProjectInfoFromAPI!.Result!.Total;
-        AllureApi.Step($"Данные по проектам получены");
+        AllureApi.Step($"Получены данные по проектам");
     }
 
     [Test(Description = "Тест на удаление проекта по коду")]
@@ -118,7 +119,7 @@ public class ProjectTest : BaseApiTest
             Assert.That(actual.Result.StatusCode, Is.EqualTo(HttpStatusCode.BadRequest));
 
             // проверки данных в ответе
-            Assert.That(_getAnswer.Status, Is.EqualTo(false));
+            Assert.That(_getAnswer!.Status, Is.EqualTo(false));
             Assert.That(_getAnswer.ErrorMessage, Is.EqualTo("Data is invalid."));
             Assert.That(_getAnswer.ErrorFields[0].Error, Is.EqualTo("Project code may not be greater than 10 characters."));
         });
@@ -156,7 +157,7 @@ public class ProjectTest : BaseApiTest
     [Category("Regression"), AllureSeverity(SeverityLevel.normal)]
     [AllureFeature("AFE")]
     [Order(7)]
-    public void GetProjectByIncorrectCode()
+    public void GetProjectByIncorrectCodeTest()
     {
         var actual = ProjectService!.GetProject("example");
 
@@ -172,5 +173,31 @@ public class ProjectTest : BaseApiTest
             Assert.That(_getAnswer.Status, Is.EqualTo(false));
         });
         AllureApi.Step($"Получена ожидаемая ошибка");
+    }
+
+    [Test(Description = "Тест на получение данных о проекте по коду проекта из JSON файла")]
+    [Category("Regression"), Category("Smoke"), AllureSeverity(SeverityLevel.normal)]
+    [AllureFeature("NFE")]
+    [Order(8)]
+    public void GetProjectFromJSONTest()
+    {
+        // Загрузка JSON из файла
+        string projectJson = File.ReadAllText(@"Resources/test_jsonFile.json");
+        _logger.Debug(projectJson);
+
+        // Создем экземпляр объекта из JSON
+        var projectObject = JsonConvert.DeserializeObject<Project>(projectJson);
+
+        var projectFromAPI = ProjectService!.GetProject(projectObject!.Code.ToString()).Result;
+
+        GetProjectAnswer? deserializedProjectFromAPI = JsonConvert
+            .DeserializeObject<GetProjectAnswer>(projectFromAPI.Content!);
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(deserializedProjectFromAPI!.Status, Is.EqualTo(true));
+            Assert.That(deserializedProjectFromAPI!.Result!.Code, Is.EqualTo(projectObject!.Code.ToString()));
+        });
+        AllureApi.Step($"Получены данные по проекту");
     }
 }

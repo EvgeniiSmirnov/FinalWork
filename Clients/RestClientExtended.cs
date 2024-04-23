@@ -32,7 +32,6 @@ public class RestClientExtended
         AllureApi.Step($"{request.Method} запрос: {request.Resource}");
         _logger.Debug($"{request.Method} запрос: {request.Resource}");
 
-
         var body = request.Parameters
             .FirstOrDefault(p => p.Type == ParameterType.RequestBody)?.Value;
 

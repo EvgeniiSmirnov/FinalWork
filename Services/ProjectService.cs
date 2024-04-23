@@ -36,7 +36,6 @@ public class ProjectService : IProjectService, IDisposable
         var request = new RestRequest("v1/project/{code}", Method.Get)
             .AddUrlSegment("code", projectCode);
 
-
         return _client.ExecuteAsync(request);
     }
 
@@ -46,7 +45,6 @@ public class ProjectService : IProjectService, IDisposable
     /// <returns></returns>
     public Task<RestResponse> GetAllProjects()
     {
-        //https://api.qase.io/v1/project?limit=1
         var request = new RestRequest("v1/project?limit=1", Method.Get);
             
         return _client.ExecuteAsync(request);
