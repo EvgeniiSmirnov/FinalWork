@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium;
-
-namespace FinalWork.Elements;
+﻿namespace FinalWork.Elements;
 
 public class Checkbox(IWebDriver driver, By by)
 {

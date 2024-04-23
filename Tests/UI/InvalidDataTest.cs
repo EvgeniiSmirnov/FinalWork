@@ -1,6 +1,4 @@
-﻿using Allure.Net.Commons;
-using NUnit.Allure.Attributes;
-using FinalWork.Models.UI;
+﻿using FinalWork.Models.UI;
 using FinalWork.Pages;
 
 namespace FinalWork.Tests.UI;

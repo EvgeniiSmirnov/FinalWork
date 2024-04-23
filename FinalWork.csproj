@@ -21,6 +21,9 @@
 	  <Content Include="appsettings.json">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
+	  <Content Include="bin\Debug\net8.0\allure-results\categories.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
 	  <Content Include="Nlog.config">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>

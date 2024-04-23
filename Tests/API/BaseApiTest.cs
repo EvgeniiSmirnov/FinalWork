@@ -1,6 +1,5 @@
 ﻿using FinalWork.Clients;
 using FinalWork.Services;
-using NUnit.Allure.Core;
 
 namespace FinalWork.Tests.API;
 

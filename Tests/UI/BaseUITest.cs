@@ -1,12 +1,8 @@
-﻿using OpenQA.Selenium;
-using FinalWork.Core;
+﻿using FinalWork.Core;
 using FinalWork.Helpers;
 using FinalWork.Helpers.Configuration;
 using FinalWork.Steps;
 using FinalWork.Models;
-using NUnit.Allure.Core;
-using Allure.Net.Commons;
-using System.Text;
 
 namespace FinalWork.Tests;
 

@@ -1,7 +1,5 @@
 ﻿using FinalWork.Models;
 using FinalWork.Pages;
-using OpenQA.Selenium;
-using NUnit.Allure.Attributes;
 
 namespace FinalWork.Steps;
 

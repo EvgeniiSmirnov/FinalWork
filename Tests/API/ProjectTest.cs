@@ -1,7 +1,5 @@
-﻿using Allure.Net.Commons;
-using Bogus;
+﻿using Bogus;
 using Newtonsoft.Json;
-using NUnit.Allure.Attributes;
 using FinalWork.Fakers;
 using FinalWork.Models.API;
 

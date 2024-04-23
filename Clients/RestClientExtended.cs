@@ -1,5 +1,4 @@
-﻿using Allure.Net.Commons;
-using FinalWork.Helpers.Configuration;
+﻿using FinalWork.Helpers.Configuration;
 
 namespace FinalWork.Clients;
 

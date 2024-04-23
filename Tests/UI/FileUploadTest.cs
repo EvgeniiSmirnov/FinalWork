@@ -1,7 +1,4 @@
-﻿using Allure.Net.Commons;
-using NUnit.Allure.Attributes;
-using System.Reflection;
-using FinalWork.Models.UI;
+﻿using FinalWork.Models.UI;
 using FinalWork.Pages;
 using FinalWork.Steps;
 

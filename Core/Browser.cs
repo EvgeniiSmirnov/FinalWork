@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium;
-
-namespace FinalWork.Core;
+﻿namespace FinalWork.Core;
 
 public class Browser
 {
