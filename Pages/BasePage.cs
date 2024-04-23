@@ -1,6 +1,5 @@
 ﻿using FinalWork.Helpers;
 using FinalWork.Helpers.Configuration;
-using OpenQA.Selenium;
 
 namespace FinalWork.Pages;
 

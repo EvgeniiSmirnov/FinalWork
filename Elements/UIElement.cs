@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Drawing;
 using FinalWork.Helpers;
 using FinalWork.Helpers.Configuration;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
 
 namespace FinalWork.Elements;
 

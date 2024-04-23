@@ -1,10 +1,6 @@
-﻿using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium;
-using FinalWork.Pages;
+﻿using FinalWork.Pages;
 using FinalWork.Steps;
 using FinalWork.Models.UI;
-using Allure.Net.Commons;
-using NUnit.Allure.Attributes;
 
 namespace FinalWork.Tests.UI;
 

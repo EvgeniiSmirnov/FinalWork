@@ -1,8 +1,4 @@
-﻿using FinalWork.Elements;
-using NUnit.Allure.Attributes;
-using OpenQA.Selenium;
-
-namespace FinalWork.Pages;
+﻿namespace FinalWork.Pages;
 
 public class ProjectPage : BasePage
 {

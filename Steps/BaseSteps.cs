@@ -1,5 +1,4 @@
 ﻿using FinalWork.Pages;
-using OpenQA.Selenium;
 
 namespace FinalWork.Steps;
 

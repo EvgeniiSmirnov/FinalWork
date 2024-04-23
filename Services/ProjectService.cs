@@ -1,6 +1,5 @@
 ﻿using FinalWork.Clients;
 using FinalWork.Models.API;
-using NUnit.Allure.Attributes;
 
 namespace FinalWork.Services;
 

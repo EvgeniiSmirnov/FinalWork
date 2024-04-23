@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium;
-using FinalWork.Elements;
-using NUnit.Allure.Attributes;
+﻿using FinalWork.Elements;
 
 namespace FinalWork.Pages;
 

@@ -1,6 +1,5 @@
 ﻿using System.Collections.ObjectModel;
 using FinalWork.Elements;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 

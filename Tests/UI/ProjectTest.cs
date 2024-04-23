@@ -1,8 +1,6 @@
 ﻿using FinalWork.Steps;
 using FinalWork.Pages;
 using FinalWork.Models.UI;
-using Allure.Net.Commons;
-using NUnit.Allure.Attributes;
 
 namespace FinalWork.Tests;
 
