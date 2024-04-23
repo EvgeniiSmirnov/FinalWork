@@ -1,0 +1,32 @@
+﻿using FinalWork.Pages;
+using FinalWork.Models.UI;
+
+namespace FinalWork.Steps;
+
+public class ProjectsSteps(IWebDriver driver) : BaseSteps(driver)
+{
+    [AllureStep("Создаём проект")]
+    public ProjectsPage CreateProject(Project project)
+    {
+        ProjectsPage projectsPage = new(Driver);
+
+        return projectsPage
+                .ClickCreateNewProjectButton()
+                .InputProjectNameValue(project.ProjectName)
+                .InputProjectCodeValue(project.ProjectCode)
+                .InputDescription(project.Description)
+                .SetCheckboxPublicType(project.IsPublicProjectAccessType)
+                .CreateProjectButtonClick();
+    }
+
+    [AllureStep("Создаём сьют")]
+    public ProjectPage CreateSuite(Suite suite)
+    {
+        ProjectPage projectPage = new(Driver);
+
+        return projectPage
+                .ClickCreateNewSuiteButton()
+                .InputSuiteNameValue(suite.SuiteName)
+                .ClickCreateSuiteButton();
+    }
+}
