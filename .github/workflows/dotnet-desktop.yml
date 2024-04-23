@@ -1,23 +1,23 @@
 name: .NET Core Desktop
 
 on:
-#  push:
-#    branches: [ "master" ]
-#  pull_request:
-#    branches: [ "master" ]
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
   workflow_dispatch: 
    inputs: 
       deployment_target:
         description: Choose target
-        required: true
-        default: smoke
+ #       required: true
+ #       default: smoke
         type: choice
         options:
           - smoke
           - regression
 
-   schedule:
-        - cron: '30 * * * *'
+  schedule:
+        - cron: '45 * * * *'
 
 jobs:
 
@@ -51,14 +51,14 @@ jobs:
     
     # Execute Smoke tests in the solution
     - name: Execute Smoke tests
-      if: "github.event.inputs.deployment_target == 'smoke' || github.event.schedule == '30 * * * *'"
-      run: dotnet test --filter Category=Smoke
+      if: "github.event.inputs.deployment_target == 'smoke' || github.event.schedule == '45 * * * *'"
+      run: dotnet test --filter Category=smoke
       id: smoke
 
     # Execute Regression tests in the solution
     - name: Execute Regression tests
       if: "github.event.inputs.deployment_target == 'regression'"
-      run: dotnet test --filter Category=Regression
+      run: dotnet test --filter Category=regression
       id: regression
     
     # Execute all unit tests in the solution
