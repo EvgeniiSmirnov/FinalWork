@@ -37,6 +37,12 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+    - name: Update Chrome # See https://stackoverflow.com/q/63651059/419956
+      run: |
+       wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+       sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+       sudo apt-get update
+       sudo apt-get --only-upgrade install google-chrome-stable
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
@@ -75,3 +81,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
         publish_dir: allure-history  
+
+    
+
+  
