@@ -51,7 +51,7 @@ jobs:
     
     # Execute Smoke tests in the solution
     - name: Execute Smoke tests
-      if: "github.event.inputs.deployment_target == 'smoke' || github.event.schedule == '20 11 * * *'"
+      if: "github.event.inputs.deployment_target == 'smoke' || github.event.schedule == '8 9 12 * *'"
       run: dotnet test --filter Category=Smoke
       id: smoke
 
@@ -63,7 +63,7 @@ jobs:
     
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      if: steps.smoke_test.conclusion == 'skipped' && steps.regression_test.conclusion == 'skipped'
+      if: steps.smoke.conclusion == 'skipped' && steps.regression.conclusion == 'skipped'
       run: dotnet test
 
     #
