@@ -2,9 +2,9 @@ name: .NET Core Desktop
 
 on:
 #  push:
-#    branches: [ "feature1" ]
+#    branches: [ "master" ]
 #  pull_request:
-#    branches: [ "feature1" ]
+#    branches: [ "master" ]
   workflow_dispatch: 
    inputs: 
       deployment_target:
@@ -17,7 +17,7 @@ on:
           - regression
 
    schedule:
-        - cron: '6 7 8 9 *'
+        - cron: '30 * * * *'
 
 jobs:
 
@@ -51,7 +51,7 @@ jobs:
     
     # Execute Smoke tests in the solution
     - name: Execute Smoke tests
-      if: "github.event.inputs.deployment_target == 'smoke' || github.event.schedule == '6 7 8 9 *'"
+      if: "github.event.inputs.deployment_target == 'smoke' || github.event.schedule == '30 * * * *'"
       run: dotnet test --filter Category=Smoke
       id: smoke
 
